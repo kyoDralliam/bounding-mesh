@@ -17,9 +17,9 @@ if (CGAL_FOUND)
 	set(BOUNDINGMESH_INCLUDE_DIRS ${BOUNDINGMESH_INCLUDE_DIRS} ${CGAL_INCLUDE_DIRS})
 	set(BOUNDINGMESH_INCLUDE_DIRS ${BOUNDINGMESH_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
 	#set(BOUNDINGMESH_INCLUDE_DIRS ${BOUNDINGMESH_INCLUDE_DIRS} ${GMP_INCLUDE_DIR})
-else(CGAL_FOUND)
+else()
 	message("Not building bounding convex decomposition, would need CGAL library.")	
-endif(CGAL_FOUND)
+endif()
 
 set(BOUNDINGMESH_INCLUDE_DIRS ${BOUNDINGMESH_INCLUDE_DIRS} PARENT_SCOPE)
 
@@ -66,6 +66,7 @@ set(
 	SegmenterSimple.h
 	Split.h
 	VoxelSubset.h
+  VoxelSet.h
 )
 
 set(BOUNDINGMESH_LIBRARIES boundingmesh)
